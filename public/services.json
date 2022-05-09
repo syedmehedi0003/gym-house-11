@@ -1,0 +1,50 @@
+[
+    {
+        "name": "The treadmill ",
+        "amount": "$300",
+        "description": "The treadmill is a great way to practice walking or running at – this is fantastic for those who ren’t confident running outside.",
+        "img": "image/treadmill-1.png",
+        "quantity": "1",
+        "supplier": "Yamaha"
+    },
+    {
+        "name": "Elliptical machine",
+        "amount": " $300 ",
+        "description": "The elliptical machine is a great way to simulate a running motion that places successfully integrates the arms for a full body workout.",
+        "img": "image/Elliptical-machine-1.png",
+        "quantity": "1",
+        "supplier": "Yamaha"
+    },
+    {
+        "name": "Upright bike",
+        "amount": " $150 ",
+        "description": "Upright bikes provide a great low-impact form of indoor exercise by simulating a road bike but without the need to go outside.",
+        "img": "image/Upright-bike-1.png",
+        "quantity": "1",
+        "supplier": "Yamaha"
+    },
+    {
+        "name": "Stair-mill",
+        "amount": " $250",
+        "description": "A stair mill literally allows you to simulate walking upstairs on an endless cycle – this is a great form of low impact cardiovascular exercise",
+        "img": "image/Stair-mill.png",
+        "quantity": "1",
+        "supplier": "Yamaha"
+    },
+    {
+        "name": "Recumbent-bike",
+        "amount": "$300",
+        "description": "Recumbent exercise bikes are a fantastic low-impact form of cardio that provides a little more comfort and back support for the user over an upright bike.",
+        "img": "image/Recumbent-exercise-bike.png",
+        "quantity": "1",
+        "supplier": "Yamaha"
+    },
+    {
+        "name": "Spinning-bike",
+        "amount": " $150 ",
+        "description": "A spin bike is a seated frame that revolves around one singular simulates the feeling of being on an outdoor bike with all the benefits of being indoors.",
+        "img": "image/Spinning-bike.png",
+        "quantity": "1",
+        "supplier": "Yamaha"
+    }
+]

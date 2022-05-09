@@ -1,0 +1,35 @@
+/* footer part start  */
+footer {
+    /* grid-area: footer; */
+    background-color: black;
+    max-width: 100%;
+}
+
+footer h3 {
+    font-size: 24px;
+    color: #FFFFFF;
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.footer-desc p {
+    color: #D9DBE1;
+    font-size: 14px;
+    color: white;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.f-icon .social:first-child {
+    margin-left: none;
+}
+
+.f-icon .social {
+    color: #D9DBE1;
+    font-size: 24px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+/* footer end  */

@@ -1,0 +1,84 @@
+.home-container {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-text h1 {
+    font-size: 60px;
+    margin-top: 160px;
+}
+
+.banner-text {
+    text-align: justify;
+}
+
+.banner-text span {
+    color: orange;
+}
+
+.banner-img img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.live-btn {
+    border-radius: 4px;
+    border: none;
+    color: blueviolet;
+    background-color: rgb(230, 215, 245);
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+}
+
+.customer {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.review-btn {
+    text-decoration: none;
+    font-size: 16px;
+    background-color: rgb(29, 51, 214);
+    color: white;
+    padding: 0px 5px;
+    border-radius: 5px;
+
+}
+
+.review-btn:hover {
+    color: rgb(29, 51, 214);
+    background-color: white;
+    border: 1px solid rgb(29, 51, 214);
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+    .banner-text h1 {
+        font-size: 40px;
+        margin-top: 0;
+    }
+
+    .banner-text {
+        text-align: center;
+
+    }
+
+    .live-btn {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .review-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

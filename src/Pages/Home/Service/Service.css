@@ -1,0 +1,19 @@
+.service img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.service {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.service-text p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.btn-text {
+    background-color: rgb(20, 158, 20);
+}

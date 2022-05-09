@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "name": "Apple-001",
+        "price": 1010,
+        "brand": "Apple",
+        "img": "Tshirtimg/download (2).jpg",
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": 2,
+        "name": "Walton-002",
+        "price": 500,
+        "brand": "Walton",
+        "img": "Tshirtimg/images (3).jpg",
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": 3,
+        "name": "Dell-003",
+        "price": 500,
+        "brand": "Dell",
+        "img": "Tshirtimg/download (1).jpg",
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": 4,
+        "name": "Hp-004",
+        "price": 700,
+        "brand": "Hp",
+        "img": "Tshirtimg/images (1).jpg",
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": 5,
+        "name": "Hp-005",
+        "price": 700,
+        "brand": "Hp",
+        "img": "Tshirtimg/download (1).jpg",
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": 6,
+        "name": "Dell-006",
+        "price": 65500,
+        "brand": "Dell",
+        "img": "Tshirtimg/images (3).jpg",
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": 7,
+        "name": "Hp-007",
+        "price": 70000,
+        "brand": "Hp",
+        "img": "Tshirtimg/images.jpg",
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": 8,
+        "name": "Hp-008",
+        "price": 70500,
+        "brand": "Hp",
+        "img": "Tshirtimg/Red-Blank-T-Shirt.jpg",
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": 9,
+        "name": "Dell-009",
+        "price": 70500,
+        "brand": "Dell",
+        "img": "Tshirtimg/images (1).jpg",
+        "shipping": 1,
+        "quantity": 0
+    }
+]
