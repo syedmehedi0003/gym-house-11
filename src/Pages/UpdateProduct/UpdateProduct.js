@@ -14,30 +14,40 @@ const UpdateProduct = () => {
 
     }, [])
 
-    // const onSubmit = data => {
-    //     console.log(data);
-    //     const url = `http://localhost:5000/service`;
 
-    //     fetch(url, {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json',
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //         .then(res => res.json())
-    //         .then(result => {
-    //             console.log(result);
-    //         })
+    const handleUpdate = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const description = event.target.description.value;
+        const amount = event.target.amount.value;
+        const quantity = event.target.quantity.value;
+        const supplier = event.target.supplier.value;
+        const img = event.target.img.value;
 
-    // };
+        const data = { name, description, amount, quantity, supplier, img };
 
+
+        const url = `http://localhost:5000/service/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                alert('Update Successfully');
+                event.target.reset();
+            })
+    }
 
 
     return (
         <div>
             <h2>Update Item: {item.name}</h2>
-            <form className='d-flex flex-column' onSubmit={handleSubmit}>
+            <form className='d-flex flex-column' onSubmit={handleUpdate}>
 
                 <input type="text" className='mb-2' placeholder='Name' name="name" />
                 <textarea className='mb-2' placeholder='Description' name="description" />
