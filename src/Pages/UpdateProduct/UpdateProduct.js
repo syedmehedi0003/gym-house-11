@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 
 
 const UpdateProduct = () => {
@@ -15,51 +17,59 @@ const UpdateProduct = () => {
     }, [])
 
 
+
     const handleUpdate = event => {
         event.preventDefault();
-        const name = event.target.name.value;
-        const description = event.target.description.value;
-        const amount = event.target.amount.value;
+
+
         const quantity = event.target.quantity.value;
-        const supplier = event.target.supplier.value;
-        const img = event.target.img.value;
 
-        const data = { name, description, amount, quantity, supplier, img };
+        // const updated = { quantity }
+
+        const newQuantity = parseInt(quantity) + parseInt(quantity);
+        console.log(newQuantity);
+        const updated = { newQuantity };
+        // console.log(updated);
 
 
+
+        //send data
         const url = `http://localhost:5000/service/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(updated)
         })
             .then(res => res.json())
-            .then(result => {
-                console.log(result);
+            .then(data => {
+                console.log(data);
                 alert('Update Successfully');
                 event.target.reset();
+
             })
     }
 
 
+
     return (
-        <div>
-            <h2>Update Item: {item.name}</h2>
+        <div className='w-50 mx-auto'>
+
+            <h2>Item Name: {item.name}</h2>
+            <h4>Quantity: {item.quantity}</h4>
+
             <form className='d-flex flex-column' onSubmit={handleUpdate}>
 
-                <input type="text" className='mb-2' placeholder='Name' name="name" />
-                <textarea className='mb-2' placeholder='Description' name="description" />
-                <input type="text" className='mb-2' placeholder='Price' name="amount" />
                 <input type="text" className='mb-2' placeholder='Quantity' name="quantity" />
-                <input type="text" className='mb-2' placeholder='Brand' name="supplier" />
-                <input type="text" className='mb-2' placeholder='Photo URL' name="img" />
-
                 <input className='mb-2' type="submit" value="Update Item" />
             </form>
+
+
         </div>
     );
 };
 
 export default UpdateProduct;
+
+

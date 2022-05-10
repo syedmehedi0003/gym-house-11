@@ -14,6 +14,7 @@ import Services from './Pages/Home/Services/Services';
 import Footer from './Pages/Shared/Footer/Footer';
 import AddProduct from '../src/Pages/AddProduct/AddProduct';
 import ManageProduct from './Pages/ManageProduct/ManageProduct';
+import UpdateProduct from './Pages/UpdateProduct/UpdateProduct';
 
 
 
@@ -46,6 +47,11 @@ function App() {
           <Route path="/manageproduct" element={
             <RequireAuth>
               <ManageProduct></ManageProduct>
+            </RequireAuth>
+          }></Route>
+          <Route path="/updateproduct/:id" element={
+            <RequireAuth>
+              <UpdateProduct></UpdateProduct>
             </RequireAuth>
           }></Route>
 
