@@ -23,44 +23,44 @@ function App() {
     <div className="App">
       <Header></Header>
 
-      <div style={{ minHeight: '500px' }}>
-        <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/home" element={<Home></Home>}></Route>
-          <Route path="/blog" element={<Blog></Blog>}></Route>
-          <Route path="/services" element={<Services></Services>}></Route>
-          <Route path="/service/:serviceId" element={<ServiceDetail>
-          </ServiceDetail>}></Route>
-          <Route path="/about" element={<About></About>}></Route>
-          <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/register" element={<Register></Register>}></Route>
-          <Route path="/checkout" element={
-            <RequireAuth>
-              <CheckOut></CheckOut>
-            </RequireAuth>
-          }></Route>
-          <Route path="/addproduct" element={
-            <RequireAuth>
-              <AddProduct></AddProduct>
-            </RequireAuth>
-          }></Route>
-          <Route path="/manageproduct" element={
-            <RequireAuth>
-              <ManageProduct></ManageProduct>
-            </RequireAuth>
-          }></Route>
-          <Route path="/updateproduct/:id" element={
-            <RequireAuth>
-              <UpdateProduct></UpdateProduct>
-            </RequireAuth>
-          }></Route>
 
-          <Route path="*" element={<NotFound></NotFound>}></Route>
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/services" element={<Services></Services>}></Route>
+        <Route path="/service/:serviceId" element={<ServiceDetail>
+        </ServiceDetail>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/checkout" element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
+        <Route path="/addproduct" element={
+          <RequireAuth>
+            <AddProduct></AddProduct>
+          </RequireAuth>
+        }></Route>
+        <Route path="/manageproduct" element={
+          <RequireAuth>
+            <ManageProduct></ManageProduct>
+          </RequireAuth>
+        }></Route>
+        <Route path="/updateproduct/:id" element={
+          <RequireAuth>
+            <UpdateProduct></UpdateProduct>
+          </RequireAuth>
+        }></Route>
+
+        <Route path="*" element={<NotFound></NotFound>}></Route>
+      </Routes>
 
 
-      <Footer></Footer>
+      <div className='mt-5'>
+        <Footer></Footer></div>
     </div>
   );
 }

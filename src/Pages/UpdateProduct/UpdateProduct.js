@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 
 
+
 const UpdateProduct = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
@@ -14,24 +15,25 @@ const UpdateProduct = () => {
             .then(res => res.json())
             .then(data => setItem(data))
 
-    }, [])
+    }, [id])
 
 
 
     const handleUpdate = event => {
         event.preventDefault();
 
-
         const quantity = event.target.quantity.value;
 
         // const updated = { quantity }
 
-        const newQuantity = parseInt(quantity) + parseInt(quantity);
+        const newQuantity = parseInt(quantity) + parseInt(item?.quantity);
         console.log(newQuantity);
-        const updated = { newQuantity };
-        // console.log(updated);
+        const updateItem = { newQuantity };
+        if (!quantity) {
+            alert('Quantity added');
+        }
 
-
+        setItem({ ...item, quantity: item.quantity = item.quantity + parseInt(quantity) });
 
         //send data
         const url = `http://localhost:5000/service/${id}`;
@@ -40,7 +42,7 @@ const UpdateProduct = () => {
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify(updated)
+            body: JSON.stringify(updateItem)
         })
             .then(res => res.json())
             .then(data => {
