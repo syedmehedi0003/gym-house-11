@@ -1,13 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from '.././src/Pages/Home/Home/Home';
-import About from '.././src/Pages/About/About';
 import Header from './Pages/Shared/Header/Header';
-import ServiceDetail from './Pages/ServiceDetail/ServiceDetail';
 import Login from './Pages/Login/Login';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import Register from './Pages/Register/Register';
-import CheckOut from './Pages/CheckOut/CheckOut';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Blog from './Pages/Blog/Blog';
 import Services from './Pages/Home/Services/Services';
