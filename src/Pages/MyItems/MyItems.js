@@ -41,7 +41,7 @@ const MyItems = () => {
 
     return (
         <div className='w-50 mx-auto text-center'>
-            <h4>My Items</h4>
+            <h4 className='mb-2'>My Items</h4>
             <h6>Name: {user.displayName}, Email: {user.email || 'GoogleSignIn'}</h6>
             <div>
                 {

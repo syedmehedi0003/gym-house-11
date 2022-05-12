@@ -20,6 +20,7 @@ const UpdateProduct = () => {
 
 
     const handleUpdate = event => {
+
         event.preventDefault();
 
         const quantity = event.target.quantity.value;
@@ -36,6 +37,7 @@ const UpdateProduct = () => {
         setItem({ ...item, quantity: item.quantity = parseInt(item.quantity) + parseInt(quantity) });
 
         //send data
+
         const url = `http://localhost:5000/service/${id}`;
         fetch(url, {
             method: 'PUT',
@@ -51,6 +53,8 @@ const UpdateProduct = () => {
                 event.target.reset();
 
             })
+
+
     }
 
 

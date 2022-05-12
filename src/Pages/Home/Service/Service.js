@@ -48,7 +48,7 @@ const Service = ({ service, services, setServices }) => {
                 <p><b>Brand:</b>  {supplier}</p>
                 <p><small className='p-1 my-2'>{description}</small> </p>
                 <Link to={`/updateproduct/${_id}`}><button className='btn btn-primary' >Update </button> </Link>
-                <button className='btn btn-secondary' onClick={() => handleDelivered()}>Delivered </button>
+                <button className='btn btn-dark' onClick={() => handleDelivered()}>Delivered </button>
 
 
 

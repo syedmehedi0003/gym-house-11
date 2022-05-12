@@ -26,14 +26,14 @@ const ManageProduct = () => {
 
     return (
         <div className='w-50 mx-auto text-center'>
-            <h2>Manage Product</h2>
+            <h4 className='mb-2'>Manage Product</h4>
             <div>
                 {
                     services.map(product => <div key={product._id}>
-                        <h5>{product.name},Quantity:{product.quantity} <br />
+                        <h6>{product.name},Quantity:{product.quantity} <br />
                             <Link to={`/updateproduct/${product._id}`}><button className='btn btn-secondary btn-text'>Update</button> </Link>
                             {/* <Link to={`/addproduct`}><button className='btn btn-secondary btn-text'>Add Item</button> </Link> */}
-                            <button className='btn btn-danger btn-text' onClick={() => handleDelete(product._id)}>Delete</button></h5>
+                            <button className='btn btn-danger btn-text' onClick={() => handleDelete(product._id)}>Delete</button></h6>
 
                     </div>)
                 }

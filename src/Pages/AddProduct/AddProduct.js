@@ -31,10 +31,10 @@ const AddProduct = () => {
 
 
     return (
-        <div className='w-50 mx-auto'>
-            <h4>Add Product</h4>
+        <div className='w-50 mx-auto text-center'>
+            <h4 className='mb-2'>Add Product</h4>
             <h6>Name: {user.displayName}, Email: {user.email}</h6>
-            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+            <form className='d-flex flex-column ' onSubmit={handleSubmit(onSubmit)}>
 
                 <input className='mb-2' placeholder='Name' {...register("Product Name")} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
@@ -51,4 +51,3 @@ const AddProduct = () => {
 
 export default AddProduct;
 
-fdsklafjlk

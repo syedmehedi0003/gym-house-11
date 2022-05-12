@@ -23,8 +23,9 @@
     }
 }
 
-@media only screenand and (min-width:577px) and (max-width:992px) {
+@media only screen and (min-width:577px) and (max-width:992px) {
     .services-container {
         grid-template-columns: repeat(2, 1fr);
+        height: 1450px;
     }
 }
