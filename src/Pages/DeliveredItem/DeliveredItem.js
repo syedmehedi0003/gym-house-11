@@ -39,51 +39,6 @@ const DeliveredItem = () => {
 
 
 
-
-
-    // const handleDelivered = event => {
-    //     // event.preventDefault();
-
-    //     // const quantity = event.target.quantity.value;
-
-    //     // const updated = { quantity }
-    //     // const quantity = item?.quantity;
-    //     // const deliveredItem = { quantity };
-
-    //     //new data
-    //     // event.preventDefault();
-
-    //     // const quantity = event.target.quantity.value;
-
-    //     // const updated = { quantity }
-
-    //     const quantity = parseInt(quantity) - 1;
-
-    //     const deliveredItem = { quantity };
-    //     console.log(deliveredItem);
-
-    //     setItem({ ...item, quantity: item.quantity = item.quantity + parseInt(quantity) });
-
-
-
-    //     //send data
-    //     const url = `http://salty-cliffs-03566.herokuapp.com/service/${id}`;
-    //     fetch(url, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'content-type': 'application/json',
-    //         },
-    //         body: JSON.stringify(deliveredItem)
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             alert('Update Successfully');
-    //             event.target.reset();
-
-    //         })
-    // }
-
     return (
         <div>
 
