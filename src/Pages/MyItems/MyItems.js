@@ -7,7 +7,7 @@ import axios from 'axios';
 const MyItems = () => {
     const [user] = useAuthState(auth);
     if (user) {
-        console.log(user);
+        // console.log(user);
     }
     const [services, setServices] = useServices();
 
@@ -27,7 +27,15 @@ const MyItems = () => {
 
         };
 
-        axios.post
+        const myItem = {
+            name: user.displayName,
+            email: user.email,
+        }
+
+        axios.post('http://localhost:3000/service', myItem)
+            .then(response => {
+                console.log(response);
+            })
     }
 
 
