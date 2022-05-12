@@ -6,11 +6,10 @@ const Blog = () => {
     return (
         <div className='p-3'>
             <h2 className='text-center'>Blog</h2>
-            <h4>Authentication Vs Authorization</h4>
-            <h5>Authentication</h5>
-            <p>Authentication is  process to prove something true or false, right or wrong.It is a process of verifying data.Like password,user-name, email, etc.. are verifying by authentication.</p>
-            <h5>Authorization</h5>
-            <p>Authorization is like a permission.who can access a data that permission is given by authorization process.the user.	Authorization isn’t visible to or changeable by the user.Authorization always takes place after authentication.</p>
+
+            <h4> Difference between javascript and nodejs</h4>
+            <p>
+                javascript is a client side scripting language and nodejs is a server side scripting language. javascript is used to create web pages and nodejs is used to create web servers. javascript is a programming language and node js is a runtime for javascript</p>
 
             <div>
                 <h4>Firebase And Authentication without Firebase</h4>
