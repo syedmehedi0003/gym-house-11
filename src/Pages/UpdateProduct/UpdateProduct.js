@@ -10,7 +10,7 @@ const UpdateProduct = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/service/${id}`;
+        const url = `http://salty-cliffs-03566.herokuapp.com/service/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -38,7 +38,7 @@ const UpdateProduct = () => {
 
         //send data
 
-        const url = `http://localhost:5000/service/${id}`;
+        const url = `http://salty-cliffs-03566.herokuapp.com/service/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

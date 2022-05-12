@@ -7,7 +7,7 @@ const DeliveredItem = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/service/${id}`;
+        const url = `http://salty-cliffs-03566.herokuapp.com/service/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -19,7 +19,7 @@ const DeliveredItem = () => {
 
         // const quantity = item?.quantity
         // const updateItem = { quantity }
-        const url = `http://localhost:5000/deliver/${id}`;
+        const url = `http://salty-cliffs-03566.herokuapp.com/deliver/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -67,7 +67,7 @@ const DeliveredItem = () => {
 
 
     //     //send data
-    //     const url = `http://localhost:5000/service/${id}`;
+    //     const url = `http://salty-cliffs-03566.herokuapp.com/service/${id}`;
     //     fetch(url, {
     //         method: 'PUT',
     //         headers: {

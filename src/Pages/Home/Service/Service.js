@@ -19,7 +19,7 @@ const Service = ({ service, services, setServices }) => {
     const id = _id;
 
     const handleDelivered = () => {
-        const url = `http://localhost:5000/deliver/${id}`;
+        const url = `http://salty-cliffs-03566.herokuapp.com/deliver/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
