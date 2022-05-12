@@ -1,7 +1,7 @@
 # Assignment 11, Gym House
 
 ## Assignment 11 Client link [Click Here](https://gym-service-5a99c.web.app/)
-## Assignment 11 server link [Click Here](https://salty-cliffs-03566.herokuapp.com/)
+## Assignment 11 server link [Click Here](https://salty-cliffs-03566.herokuapp.com/service)
 
 ### Work Explanation  
 - React routes
