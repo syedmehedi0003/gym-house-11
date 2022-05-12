@@ -41,13 +41,13 @@ const MyItems = () => {
 
     return (
         <div className='w-50 mx-auto text-center'>
-            <h2>My Items</h2>
-            <h4>Name: {user.displayName}, Email: {user.email || 'GoogleSignIn'}</h4>
+            <h4>My Items</h4>
+            <h6>Name: {user.displayName}, Email: {user.email || 'GoogleSignIn'}</h6>
             <div>
                 {
                     services.map(product => <div key={product._id}>
-                        <h5>{product.name},Quantity:{product.quantity}
-                            <button className='btn btn-danger btn-text' onClick={() => handleDelete(product._id)}>Delete</button></h5>
+                        <h6>{product.name},Quantity:{product.quantity} <br />
+                            <button className='btn btn-danger btn-text' onClick={() => handleDelete(product._id)}>Delete</button></h6>
 
                     </div>)
                 }

@@ -10,11 +10,16 @@
     height: 900px;
 }
 
+.service-card {
+    margin-bottom: 300px;
+}
+
 
 /* for services responsive  */
 @media only screen and (max-width:576px) {
     .services-container {
         grid-template-columns: repeat(1, 1fr);
+        height: 3000px;
     }
 }
 

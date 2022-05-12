@@ -16,7 +16,7 @@ const Services = () => {
 
 
     return (
-        <div className='container mx-auto mb-5'>
+        <div className='container mx-auto mb-5 service-card'>
             <h2 className='services-text '>Our Services</h2>
 
             <div className='services-container pb-4'>

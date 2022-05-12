@@ -30,9 +30,9 @@ const ManageProduct = () => {
             <div>
                 {
                     services.map(product => <div key={product._id}>
-                        <h5>{product.name},Quantity:{product.quantity}
+                        <h5>{product.name},Quantity:{product.quantity} <br />
                             <Link to={`/updateproduct/${product._id}`}><button className='btn btn-secondary btn-text'>Update</button> </Link>
-                            <Link to={`/addproduct`}><button className='btn btn-secondary btn-text'>Add Item</button> </Link>
+                            {/* <Link to={`/addproduct`}><button className='btn btn-secondary btn-text'>Add Item</button> </Link> */}
                             <button className='btn btn-danger btn-text' onClick={() => handleDelete(product._id)}>Delete</button></h5>
 
                     </div>)

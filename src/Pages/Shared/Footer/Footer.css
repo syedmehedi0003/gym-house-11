@@ -2,6 +2,13 @@
 footer {
     background-color: black;
     max-width: 100%;
+
+    /* position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; */
+
+    text-align: center;
 }
 
 footer h3 {
@@ -18,17 +25,9 @@ footer h3 {
     color: white;
     margin-top: 3px;
     text-align: center;
+    margin-bottom: 3px;
 }
 
-/* .f-icon .social:first-child {
-    margin-left: none;
-}
 
-.f-icon .social {
-    color: #D9DBE1;
-    font-size: 24px;
-    margin-left: 16px;
-    cursor: pointer;
-} */
 
 /* footer end  */

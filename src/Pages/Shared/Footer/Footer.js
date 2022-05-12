@@ -4,11 +4,14 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer>
-            <h3>Influencer products</h3>
-            <div class="footer-desc">
-                <p>Copyright &copy; 2022 influencer products All rights reserved</p>
+            <div className='align-items-center'>
+                <h3>GYM HOUSE</h3>
+                <div className="footer-desc pb-5">
+                    <p>Copyright &copy; 2022 gym house. ( Syed Mehedi Hasan )</p>
 
+                </div>
             </div>
+
 
         </footer>
 
