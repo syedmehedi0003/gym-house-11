@@ -1,9 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import useServices from '../hooks/useServices';
-import './ManageProduct.css';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import axios from 'axios';
 
-const ManageProduct = () => {
+const MyItems = () => {
+    const [user] = useAuthState(auth);
+    if (user) {
+        console.log(user);
+    }
     const [services, setServices] = useServices();
 
     const handleDelete = id => {
@@ -20,19 +25,20 @@ const ManageProduct = () => {
                     setServices(remaining);
                 })
 
-        }
+        };
+
+        axios.post
     }
 
 
     return (
         <div className='w-50 mx-auto text-center'>
-            <h2>Manage Product</h2>
+            <h2>My Items</h2>
+            <h4>Name: {user.displayName}, Email: {user.email}</h4>
             <div>
                 {
                     services.map(product => <div key={product._id}>
                         <h5>{product.name},Quantity:{product.quantity}
-                            <Link to={`/updateproduct/${product._id}`}><button className='btn btn-secondary btn-text'>Update</button> </Link>
-                            <Link to={`/addproduct`}><button className='btn btn-secondary btn-text'>Add Item</button> </Link>
                             <button className='btn btn-danger btn-text' onClick={() => handleDelete(product._id)}>Delete</button></h5>
 
                     </div>)
@@ -43,4 +49,4 @@ const ManageProduct = () => {
     );
 };
 
-export default ManageProduct;
+export default MyItems;

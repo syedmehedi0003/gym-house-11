@@ -1,17 +1,42 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import useServices from '../../hooks/useServices';
 import './Service.css';
 
-const Service = ({ service }) => {
+const Service = ({ service, services, setServices }) => {
+
     const { _id, name, img, amount, quantity, supplier, description } = service;
 
-    const navigate = useNavigate();
-    const navigateToServiceDetail = id => {
 
-        navigate(`/service/ ${id}. ${name}`)
+    // const [services, setServices] = useServices();
+    // const navigate = useNavigate();
+    // // const navigateToServiceDetail = id => {
+
+    // //     navigate(`/service/ ${id}. ${name}`)
 
 
-    }
+    // // }
+    const id = _id;
+
+    const handleDelivered = () => {
+        const url = `http://localhost:5000/deliver/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            // body: JSON.stringify(updateItem)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+
+
+            })
+        setServices(services.map(service => service._id === id ? { ...service, quantity: service.quantity - 1 } : service));
+
+
+    };
 
     return (
         <div className='service p-1 mb-3'>
@@ -23,7 +48,9 @@ const Service = ({ service }) => {
                 <p><b>Brand:</b>  {supplier}</p>
                 <p><small className='p-1 my-2'>{description}</small> </p>
                 <Link to={`/updateproduct/${_id}`}><button className='btn btn-primary' >Update </button> </Link>
-                <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-secondary btn-text'> Order Now</button>
+                <button className='btn btn-secondary' onClick={() => handleDelivered()}>Delivered </button>
+
+
 
             </div>
         </div>

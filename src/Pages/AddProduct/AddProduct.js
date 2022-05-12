@@ -1,7 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddProduct = () => {
+    const [user] = useAuthState(auth);
+    if (user) {
+        console.log(user);
+    }
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
@@ -23,14 +29,14 @@ const AddProduct = () => {
 
     };
 
-    // "quantity": "1",
-    //     "supplier": "Yamaha"
+
     return (
         <div className='w-50 mx-auto'>
             <h2>Add Product</h2>
-
+            <h4>Name: {user.displayName}, Email: {user.email}</h4>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2' placeholder='Name' {...register("name")} />
+
+                <input className='mb-2' placeholder='Name' {...register("Product Name")} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
                 <input className='mb-2' placeholder='Price' {...register("amount")} />
                 <input className='mb-2' placeholder='Quantity' {...register("quantity")} />

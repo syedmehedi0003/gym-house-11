@@ -15,6 +15,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import AddProduct from '../src/Pages/AddProduct/AddProduct';
 import ManageProduct from './Pages/ManageProduct/ManageProduct';
 import UpdateProduct from './Pages/UpdateProduct/UpdateProduct';
+import DeliveredItem from './Pages/DeliveredItem/DeliveredItem';
+import MyItems from './Pages/MyItems/MyItems';
 
 
 
@@ -49,9 +51,19 @@ function App() {
             <ManageProduct></ManageProduct>
           </RequireAuth>
         }></Route>
-        <Route path="/updateproduct/:id" element={
+        {/* <Route path="/updateproduct/:id" element={
           <RequireAuth>
             <UpdateProduct></UpdateProduct>
+          </RequireAuth>
+        }></Route> */}
+        <Route path="/delivered/:id" element={
+          <RequireAuth>
+            <DeliveredItem></DeliveredItem>
+          </RequireAuth>
+        }></Route>
+        <Route path="/myitems" element={
+          <RequireAuth>
+            <MyItems></MyItems>
           </RequireAuth>
         }></Route>
 

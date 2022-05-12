@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" sticky='top' variant="light">
             <Container>
-                <Navbar.Brand as={Link} to="/">Gym House</Navbar.Brand>
+                <Navbar.Brand className='text-warning' as={Link} to="/">Gym House</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -30,7 +30,7 @@ const Header = () => {
                             user && <>
                                 <Nav.Link as={Link} to="manageproduct">Manage Item</Nav.Link>
                                 <Nav.Link as={Link} to="addproduct">Add Item</Nav.Link>
-                                <Nav.Link as={Link} to="updateproduct">Update Item</Nav.Link>
+                                <Nav.Link as={Link} to="myitems">My Items</Nav.Link>
                             </>
 
                         }

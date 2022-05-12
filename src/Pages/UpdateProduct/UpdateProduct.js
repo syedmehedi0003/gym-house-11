@@ -26,14 +26,14 @@ const UpdateProduct = () => {
 
         // const updated = { quantity }
 
-        const newQuantity = parseInt(quantity) + parseInt(item?.quantity);
+        const newQuantity = parseInt(quantity) + parseInt(item.quantity);
         console.log(newQuantity);
         const updateItem = { newQuantity };
         if (!quantity) {
             alert('Quantity added');
         }
 
-        setItem({ ...item, quantity: item.quantity = item.quantity + parseInt(quantity) });
+        setItem({ ...item, quantity: item.quantity = parseInt(item.quantity) + parseInt(quantity) });
 
         //send data
         const url = `http://localhost:5000/service/${id}`;
