@@ -42,7 +42,7 @@ const MyItems = () => {
     return (
         <div className='w-50 mx-auto text-center'>
             <h2>My Items</h2>
-            <h4>Name: {user.displayName}, Email: {user.email}</h4>
+            <h4>Name: {user.displayName}, Email: {user.email || 'GoogleSignIn'}</h4>
             <div>
                 {
                     services.map(product => <div key={product._id}>

@@ -1,6 +1,5 @@
 /* footer part start  */
 footer {
-    /* grid-area: footer; */
     background-color: black;
     max-width: 100%;
 }
@@ -21,7 +20,7 @@ footer h3 {
     text-align: center;
 }
 
-.f-icon .social:first-child {
+/* .f-icon .social:first-child {
     margin-left: none;
 }
 
@@ -30,6 +29,6 @@ footer h3 {
     font-size: 24px;
     margin-left: 16px;
     cursor: pointer;
-}
+} */
 
 /* footer end  */

@@ -21,6 +21,7 @@ const SocialLogin = () => {
 
     if (user) {
         navigate('/home');
+        console.log(user);
     }
 
     return (

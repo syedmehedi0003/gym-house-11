@@ -51,11 +51,11 @@ function App() {
             <ManageProduct></ManageProduct>
           </RequireAuth>
         }></Route>
-        {/* <Route path="/updateproduct/:id" element={
+        <Route path="/updateproduct/:id" element={
           <RequireAuth>
             <UpdateProduct></UpdateProduct>
           </RequireAuth>
-        }></Route> */}
+        }></Route>
         <Route path="/delivered/:id" element={
           <RequireAuth>
             <DeliveredItem></DeliveredItem>
