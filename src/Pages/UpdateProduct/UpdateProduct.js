@@ -10,7 +10,7 @@ const UpdateProduct = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `http://salty-cliffs-03566.herokuapp.com/service/${id}`;
+        const url = `https://salty-cliffs-03566.herokuapp.com/service/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -38,7 +38,7 @@ const UpdateProduct = () => {
 
         //send data
 
-        const url = `http://salty-cliffs-03566.herokuapp.com/service/${id}`;
+        const url = `https://salty-cliffs-03566.herokuapp.com/service/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -68,7 +68,7 @@ const UpdateProduct = () => {
             <form className='d-flex flex-column' onSubmit={handleUpdate}>
 
                 <input type="text" className='mb-2' placeholder='Quantity' name="quantity" />
-                <input className='mb-2' type="submit" value="Update Item" />
+                <input className='mb-2 btn btn-primary' type="submit" value="Update Item" />
             </form>
 
 

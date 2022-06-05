@@ -3,6 +3,7 @@ import useServices from '../hooks/useServices';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
@@ -14,7 +15,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are u sure?');
         if (proceed) {
-            const url = `http://salty-cliffs-03566.herokuapp.com/service/${id}`;
+            const url = `https://salty-cliffs-03566.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -52,7 +53,7 @@ const MyItems = () => {
                     </div>)
                 }
             </div>
-
+            <ToastContainer />
         </div >
     );
 };

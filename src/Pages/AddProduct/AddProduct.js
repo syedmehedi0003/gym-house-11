@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { ToastContainer } from 'react-toastify';
 
 const AddProduct = () => {
     const [user] = useAuthState(auth);
@@ -11,7 +12,7 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://salty-cliffs-03566.herokuapp.com/service`;
+        const url = `https://salty-cliffs-03566.herokuapp.com/service`;
 
         fetch(url, {
             method: 'POST',
@@ -43,8 +44,10 @@ const AddProduct = () => {
                 <input className='mb-2' placeholder='Brand' {...register("supplier")} />
                 <input className='mb-2' placeholder='Photo URL' {...register("img")} />
 
-                <input className='mb-2' type="submit" value="Add Item" />
+                <input className='mb-2 btn btn-primary' type="submit" value="Add Item" />
             </form>
+
+            <ToastContainer />
         </div>
     );
 };

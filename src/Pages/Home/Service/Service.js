@@ -19,7 +19,7 @@ const Service = ({ service, services, setServices }) => {
     const id = _id;
 
     const handleDelivered = () => {
-        const url = `http://salty-cliffs-03566.herokuapp.com/deliver/${id}`;
+        const url = `https://salty-cliffs-03566.herokuapp.com/deliver/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -39,16 +39,19 @@ const Service = ({ service, services, setServices }) => {
     };
 
     return (
-        <div className='service p-1 mb-3'>
-            <img className='w-50 img-fluid' src={img} alt="" />
-            <div className='service-text'>
-                <h2 className='py-2'>{name}</h2>
+        <div className='service p-1 mb-3 card'>
+            <div className='w-100 d-flex justify-content-center align-items-center'>
+                <img className='w-50 ' src={img} alt="" />
+            </div>
+
+            <div className='service-text card-body'>
+                <h2 className='card-title'>{name}</h2>
                 <p><b>Price:</b> {amount}</p>
                 <p><b>Quantity: </b>{quantity}</p>
                 <p><b>Brand:</b>  {supplier}</p>
-                <p><small className='p-1 my-2'>{description}</small> </p>
-                <Link to={`/updateproduct/${_id}`}><button className='btn btn-primary' >Update </button> </Link>
-                <button className='btn btn-dark' onClick={() => handleDelivered()}>Delivered </button>
+                <p><small className='card-text'>{description}</small> </p>
+                <Link className='btn btn-primary mx-2' to={`/updateproduct/${_id}`}>Update </Link>
+                <button className='btn btn-secondary' onClick={() => handleDelivered()}>Delivered </button>
 
 
 

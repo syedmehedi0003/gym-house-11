@@ -6,6 +6,7 @@ const Blog = () => {
     return (
         <div className='p-3'>
             <h2 className='text-center'>Blog</h2>
+            < hr className='p-0  mb-3' />
             <div>
                 <h4> Difference between javascript and nodejs</h4>
                 <p>
