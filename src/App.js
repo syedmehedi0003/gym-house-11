@@ -8,7 +8,7 @@ import Register from './Pages/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Blog from './Pages/Blog/Blog';
 import Services from './Pages/Home/Services/Services';
-import Footer from './Pages/Shared/Footer/Footer';
+// import Footer from './Pages/Shared/Footer/Footer';
 import AddProduct from '../src/Pages/AddProduct/AddProduct';
 import ManageProduct from './Pages/ManageProduct/ManageProduct';
 import UpdateProduct from './Pages/UpdateProduct/UpdateProduct';
@@ -63,10 +63,12 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
 
+      {/* <div className='mt-5'> */}
+      {/* <Footer></Footer></div> */}
+      {/* </div> */}
 
-      <div className='mt-5'>
-        <Footer></Footer></div>
     </div>
+
   );
 }
 

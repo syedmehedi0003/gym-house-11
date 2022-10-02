@@ -7,7 +7,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-    height: 1000px;
+    /* height: 1000px; */
+    height: auto;
 }
 
 .service-card {
@@ -19,13 +20,15 @@
 @media only screen and (max-width:576px) {
     .services-container {
         grid-template-columns: repeat(1, 1fr);
-        height: 3100px;
+        /* height: 3100px; */
+        height: auto;
     }
 }
 
 @media only screen and (min-width:577px) and (max-width:992px) {
     .services-container {
         grid-template-columns: repeat(2, 1fr);
-        height: 1550px;
+        /* height: 1550px; */
+        height: auto;
     }
 }
