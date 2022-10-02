@@ -6,7 +6,6 @@ import '../Banner/Banner.css';
 const Banner = () => {
     return (
         <div className='home-container container'>
-
             <div className='banner-part row'>
 
                 <div className="banner-text col-12 col-md-12 col-lg-6 order-2  order-1 order-lg-0">

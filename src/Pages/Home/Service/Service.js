@@ -39,7 +39,7 @@ const Service = ({ service, services, setServices }) => {
     };
 
     return (
-        <div className='service p-1 mb-3 card'>
+        <div className='service p-1 mb-3 card shadow-lg p-3 mb-5 bg-body'>
             <div className='w-100 d-flex justify-content-center align-items-center'>
                 <img className='w-50 ' src={img} alt="" />
             </div>
@@ -50,7 +50,7 @@ const Service = ({ service, services, setServices }) => {
                 <p><b>Quantity: </b>{quantity}</p>
                 <p><b>Brand:</b>  {supplier}</p>
                 <p><small className='card-text'>{description}</small> </p>
-                <Link className='btn btn-primary mx-2' to={`/updateproduct/${_id}`}>Update </Link>
+                <Link className='btn btn-info mx-2' to={`/updateproduct/${_id}`}>Update </Link>
                 <button className='btn btn-secondary' onClick={() => handleDelivered()}>Delivered </button>
 
 

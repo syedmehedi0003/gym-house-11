@@ -30,11 +30,13 @@ const Services = () => {
                     ></Service>)
                 }
 
-
             </div>
 
         </div>
+
+
     );
+
 };
 
 export default Services;

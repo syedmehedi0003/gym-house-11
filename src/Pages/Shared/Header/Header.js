@@ -4,6 +4,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import logo from '../../../images/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -13,11 +14,13 @@ const Header = () => {
     const handleLogOut = () => {
         signOut(auth);
     }
-
+    // navbar navbar-dark bg-dark
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" sticky='top' variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="dark" sticky='top' variant="dark">
             <Container>
-                <Navbar.Brand className='text-warning' as={Link} to="/">Gym House</Navbar.Brand>
+                <Navbar.Brand className='text-warning' as={Link} to="/">
+                    <img className='logo' src={logo} alt="" />
+                    Gym House</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
