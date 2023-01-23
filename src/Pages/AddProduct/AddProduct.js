@@ -12,7 +12,7 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `https://salty-cliffs-03566.herokuapp.com/service`;
+        const url = `https://gym-house-server-production-51a4.up.railway.app/service`;
 
         fetch(url, {
             method: 'POST',

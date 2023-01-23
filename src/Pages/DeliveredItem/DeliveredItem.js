@@ -7,7 +7,7 @@ const DeliveredItem = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `https://salty-cliffs-03566.herokuapp.com/service/${id}`;
+        const url = `https://gym-house-server-production-51a4.up.railway.app/service/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -19,7 +19,7 @@ const DeliveredItem = () => {
 
         // const quantity = item?.quantity
         // const updateItem = { quantity }
-        const url = `https://salty-cliffs-03566.herokuapp.com/deliver/${id}`;
+        const url = `https://gym-house-server-production-51a4.up.railway.app/deliver/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

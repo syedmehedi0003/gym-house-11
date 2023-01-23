@@ -19,7 +19,7 @@ const Service = ({ service, services, setServices }) => {
     const id = _id;
 
     const handleDelivered = () => {
-        const url = `https://salty-cliffs-03566.herokuapp.com/deliver/${id}`;
+        const url = `https://gym-house-server-production-51a4.up.railway.app/deliver/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

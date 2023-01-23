@@ -11,7 +11,7 @@ const ManageProduct = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are u sure?');
         if (proceed) {
-            const url = `https://salty-cliffs-03566.herokuapp.com/service/${id}`;
+            const url = `https://gym-house-server-production-51a4.up.railway.app/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

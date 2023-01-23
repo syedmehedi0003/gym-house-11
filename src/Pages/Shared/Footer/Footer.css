@@ -1,33 +1,31 @@
 /* footer part start  */
 footer {
-    background-color: black;
-    max-width: 100%;
+  background-color: rgb(43, 42, 42);
+  max-width: 100%;
 
-    /* position: fixed;
+  /* position: fixed;
     left: 0;
     bottom: 0;
     width: 100%; */
 
-    text-align: center;
+  text-align: center;
 }
 
 footer h3 {
-    font-size: 24px;
-    color: #FFFFFF;
-    padding-top: 50px;
-    text-align: center;
-    margin-bottom: 0px;
+  font-size: 24px;
+  color: #ffffff;
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 0px;
 }
 
 .footer-desc p {
-    color: #D9DBE1;
-    font-size: 14px;
-    color: white;
-    margin-top: 3px;
-    text-align: center;
-    margin-bottom: 3px;
+  color: #d9dbe1;
+  font-size: 14px;
+  color: white;
+  margin-top: 3px;
+  text-align: center;
+  margin-bottom: 3px;
 }
-
-
 
 /* footer end  */
