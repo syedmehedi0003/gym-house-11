@@ -1,56 +1,58 @@
 import React from "react";
 import "./Contact.css";
 
-import { FaMapMarkerAlt, FaPhoneAlt, FaLink, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaLink } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <div className="contact container">
       <h2 className="services-text mt-5 mb-5 text-center">Contact Us</h2>
-      <div className="d-flex  justify-content-center px-2">
-        <form className="margin">
-          <div class="row g-3 gx-0 w-75">
-            <div class="col-sm-4">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div class="col-sm-4">
-              <input
-                type="number"
-                class="form-control"
-                placeholder="Your Phone Number"
-                required
-              />
-            </div>
-            <div class="col-sm-4">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Your Email"
-              />
-            </div>
+      <div className="d-flex flex-column flex-lg-row justify-content-between px-2">
+        <div>
+          <form className="margin">
+            <div class="row g-3 gx-0">
+              <div class="col-sm-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="col-sm-4">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Your Phone Number"
+                  required
+                />
+              </div>
+              <div class="col-sm-4">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                />
+              </div>
 
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="5"
-                placeholder="Your Message"
-                required
-              ></textarea>
-            </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
 
-            <div className="d-flex  justify-content-center mt-0">
-              <button type="submit" onSubmit="" class="btn btn-info col-sm-2">
-                Submit
-              </button>
+              <div className="d-flex  justify-content-center mt-0">
+                <button type="submit" onSubmit="" class="btn btn-info col-sm-2">
+                  Submit
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
 
         <div className="">
           <h3 className="">Main Office</h3>
@@ -73,7 +75,7 @@ const Contact = () => {
               <span className="m-1 text-primary">
                 <FaLink className="text-secondary" />
               </span>
-              www.wfhbd.org
+              https://gym-service-5a99c.web.app
             </p>
           </div>
         </div>
@@ -81,8 +83,8 @@ const Contact = () => {
 
       {/*  input box end  */}
 
-      <h2 className="services-text mt-5 mb-2 text-center">Our Location</h2>
-      <div className="mb-10 p-5 lg:mx-8">
+      <h2 className="services-text my-5 text-center">Our Location</h2>
+      <div className="mb-5">
         <iframe
           style={{ width: "100%", height: "450px" }}
           scrolling="no"

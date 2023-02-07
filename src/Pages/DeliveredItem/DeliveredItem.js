@@ -1,53 +1,43 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const DeliveredItem = () => {
-    const { id } = useParams();
-    const [item, setItem] = useState({});
+  const { id } = useParams();
+  const [item, setItem] = useState({});
 
-    useEffect(() => {
-        const url = `https://gym-house-server-production-51a4.up.railway.app/service/${id}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setItem(data))
+  useEffect(() => {
+    const url = `https://gym-server.onrender.com/service/${id}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setItem(data));
+  }, [id]);
 
-    }, [id])
+  const handleDelivered = (e) => {
+    // const quantity = item?.quantity
+    // const updateItem = { quantity }
+    const url = `https://gym-server.onrender.com/deliver/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      // body: JSON.stringify(updateItem)
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+      });
+  };
 
+  return (
+    <div>
+      <h2>Item Name: {item.name}</h2>
+      <h4>Quantity: {item.quantity}</h4>
 
-    const handleDelivered = e => {
-
-        // const quantity = item?.quantity
-        // const updateItem = { quantity }
-        const url = `https://gym-house-server-production-51a4.up.railway.app/deliver/${id}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            // body: JSON.stringify(updateItem)
-        })
-            .then(res => res.json())
-            .then(result => {
-                console.log(result)
-
-
-            })
-
-
-    };
-
-
-
-    return (
-        <div>
-
-            <h2>Item Name: {item.name}</h2>
-            <h4>Quantity: {item.quantity}</h4>
-
-            <button onClick={() => handleDelivered(item._id)}>Delivered</button>
-        </div>
-    );
+      <button onClick={() => handleDelivered(item._id)}>Delivered</button>
+    </div>
+  );
 };
 
 export default DeliveredItem;
