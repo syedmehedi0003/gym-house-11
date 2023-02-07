@@ -58,20 +58,20 @@ const Contact = () => {
           <h3 className="">Main Office</h3>
 
           <div className="text-secondary">
-            <p className="flex mt-2">
+            <p className="flex mt-2 fs-6">
               <span className="m-1 text-primary">
                 <FaMapMarkerAlt className="text-secondary" />
               </span>
               House 33 Munsibari road, jigatola 1209
             </p>
-            <p className="flex mt-2">
+            <p className="flex mt-2 fs-6">
               <span className="m-1 text-primary">
                 <FaPhoneAlt className="text-secondary" />
               </span>
               +8801794013834
             </p>
 
-            <p className="mt-2 flex">
+            <p className="mt-2 flex fs-6">
               <span className="m-1 text-primary">
                 <FaLink className="text-secondary" />
               </span>
